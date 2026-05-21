@@ -18,4 +18,4 @@ You can edit the `.md` files directly on GitHub or clone the repository and edit
 The site should be available at:
 
 ```text
-https://yourusername.github.io/SP26/
+https://jhu-chembe-meb.github.io/

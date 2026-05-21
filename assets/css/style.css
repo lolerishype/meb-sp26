@@ -1,0 +1,285 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --muted: #667085;
+  --link: #0057b8;
+  --link-hover: #003f87;
+  --border: #d0d7de;
+  --soft-bg: #f6f8fa;
+  --accent-bg: #eaf3ff;
+  --warning-bg: #fff8e1;
+  --warning-border: #f2c94c;
+  --danger-bg: #fdecea;
+  --danger-border: #e74c3c;
+  --success-bg: #ecfdf3;
+  --success-border: #12b76a;
+  --header-bg: #002d5b;
+  --header-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.site-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 1.2rem 0 0.9rem;
+  border-bottom: 4px solid #f2c94c;
+}
+
+.site-title {
+  margin: 0 0 0.8rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.site-title a {
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.page-content {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin-top: 1.8rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25rem;
+  font-size: 1.45rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 0.96rem;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.65rem;
+  vertical-align: top;
+}
+
+th {
+  background: var(--soft-bg);
+  font-weight: 700;
+}
+
+tr:nth-child(even) td {
+  background: #fcfcfd;
+}
+
+code {
+  background: var(--soft-bg);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+}
+
+pre {
+  background: var(--soft-bg);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.notice,
+.warning,
+.danger,
+.success {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.2rem 0;
+}
+
+.notice {
+  background: var(--accent-bg);
+  border-left: 5px solid var(--link);
+}
+
+.warning {
+  background: var(--warning-bg);
+  border-left: 5px solid var(--warning-border);
+}
+
+.danger {
+  background: var(--danger-bg);
+  border-left: 5px solid var(--danger-border);
+}
+
+.success {
+  background: var(--success-bg);
+  border-left: 5px solid var(--success-border);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  background: var(--link);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.55rem 0.85rem;
+  border-radius: 7px;
+  margin: 0.25rem 0;
+}
+
+.button:hover {
+  background: var(--link-hover);
+  color: #fff;
+}
+
+.button.disabled,
+.button.disabled:hover {
+  background: #98a2b3;
+  cursor: not-allowed;
+  color: #fff;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  background: var(--soft-bg);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--soft-bg);
+  color: var(--muted);
+  padding: 1.25rem 0;
+}
+
+.site-footer p {
+  margin: 0.2rem 0;
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.release-box {
+  border: 1px solid var(--border);
+  background: var(--soft-bg);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+@media print {
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-title {
+    font-size: 1.35rem;
+  }
+
+  .site-nav {
+    display: block;
+  }
+
+  .site-nav a {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

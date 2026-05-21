@@ -1,11 +1,10 @@
 title: "Introduction to Chemical and Biological Processes - Fall 2026"
 short_title: "MEBFA26"
 semester: "Fall 2026"
-description: "Course website for Course Title, Fall 2026"
+description: "Course website for Introduction to Chemical and Biological Processes, Fall 2026"
 
-# no need for baseurl: "/FA26"
-
-url: "https://jhu-chembe-meb.github.io/"
+baseurl: "/FA26"
+url: "https://jhu-chembe-meb.github.io"
 
 markdown: kramdown
 kramdown:

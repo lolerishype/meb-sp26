@@ -3,7 +3,7 @@ short_title: "MEBFA26"
 semester: "Fall 2026"
 description: "Course website for Course Title, Fall 2026"
 
-baseurl: "/FA26"
+# no need for baseurl: "/FA26"
 
 url: "https://jhu-chembe-meb.github.io/"
 

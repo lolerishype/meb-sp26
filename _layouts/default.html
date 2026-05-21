@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>
+    {% if page.title %}
+      {{ page.title }} | {{ site.short_title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <script>
+    window.COURSE_BASEURL = "{{ site.baseurl }}";
+  </script>
+
+  <script defer src="{{ '/assets/js/release.js' | relative_url }}"></script>
+
+  <!-- MathJax for LaTeX math rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </h1>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/syllabus.html' | relative_url }}">Syllabus</a>
+        <a href="{{ '/schedule.html' | relative_url }}">Schedule</a>
+        <a href="{{ '/homework.html' | relative_url }}">Homework</a>
+        <a href="{{ '/exams.html' | relative_url }}">Practice Exams</a>
+        <a href="{{ '/resources.html' | relative_url }}">Resources</a>
+        <a href="{{ '/office-hours.html' | relative_url }}">Office Hours</a>
+        <a href="{{ '/policies.html' | relative_url }}">Policies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        {{ site.short_title }} &middot; {{ site.semester }}
+      </p>
+      <p class="small">
+        Last updated: {{ site.time | date: "%B %-d, %Y" }}
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
